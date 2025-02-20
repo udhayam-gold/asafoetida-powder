@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification"content=" google9b01d8a2968f02df"/>
+  <meta name="google-site-verification"content=" google9b01d8a2968f02df"/>
     <title>L.S Asafoetida powder</title>
     <style>
 
@@ -221,18 +221,17 @@
 
     <script>
         function buyProduct(productName) {
-            let quantity = prompt(`${productName} INPUT YOUR (Quantity) :`);
-
+            let quantity = prompt(`How many ${productName} items would you like to order?`);
             if (quantity && !isNaN(quantity) && quantity > 0) {
-                if (confirm(`${productName} - ${quantity} pcs. PLACE THE ORDER`)) {
-                    alert("YOUR ORDER PLACED SUCCESSFULL");
+                if (confirm(`${productName} - ${quantity} pcs. Do you want to place the order?`)) {
+                    alert("Your order has been placed successfully!");
                     let whatsappURL = `https://wa.me/919786746255?text=Order%20Details%3A%20${encodeURIComponent(productName)}%20-%20Quantity%3A%20${quantity}`;
-                    window.open(whatsappURL, "_blank");
+                    window.location.href =whatsappURL
                 } else {
-                    alert("YOUR ORDER IS CANCELLED.");
+                    alert("Your order has been cancelled.");
                 }
             } else {
-                alert("INPUT CORRECT QUANTITY.");
+                alert("Please enter a valid quantity.");
             }
         }
     </script>
